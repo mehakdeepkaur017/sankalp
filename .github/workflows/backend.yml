@@ -33,7 +33,7 @@ jobs:
         
     - name: Test with pytest
       env:
-        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_db
+        DATABASE_URL: sqlite:///./test.db
         SESSION_SECRET: test-secret-key-for-ci
       run: |
         pytest
